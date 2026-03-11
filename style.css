@@ -116,7 +116,9 @@ PAGE LAYOUT
 ================================*/
 
 .page{
-height:100vh;
+min-height:100dvh;
+padding:40px 15px;
+
 width:100%;
 
 display:flex;
