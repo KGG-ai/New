@@ -70,23 +70,13 @@ PAGE CHANGE WITH GLASS EFFECT
 
 function nextPage(num){
 
-let slash=document.getElementById("slash");
+let flash=document.getElementById("flashReveal")
 
-slash.style.animation="swordSlash 0.6s ease";
-
-let sound=document.getElementById("slashSound");
-
-sound.volume=0.25;
-sound.currentTime=0;
-sound.play().catch(()=>{});
-
-let flash=document.getElementById("flash")
-
-flash.style.animation="slashFlash 0.15s ease"
+flash.style.animation="flashReveal 0.4s ease"
 
 setTimeout(()=>{
 flash.style.animation=""
-},150)
+},400)
 
 setTimeout(()=>{
 
