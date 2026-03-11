@@ -747,3 +747,66 @@ z-index:999;
 50%{opacity:0.8;}
 100%{opacity:0;}
 }
+/* IMAGE VIEWER */
+
+#imageViewer{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.85);
+backdrop-filter:blur(8px);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+opacity:0;
+visibility:hidden;
+
+z-index:9999;
+
+transition:opacity .4s ease;
+}
+
+#imageViewer.show{
+opacity:1;
+visibility:visible;
+}
+
+#viewerImg{
+max-width:90%;
+max-height:85%;
+border-radius:16px;
+
+box-shadow:
+0 0 40px rgba(255,255,255,0.2),
+0 0 80px rgba(200,100,255,0.3);
+
+animation:memoryZoom .4s ease;
+}
+
+@keyframes memoryZoom{
+0%{
+transform:scale(.7);
+opacity:0;
+}
+100%{
+transform:scale(1);
+opacity:1;
+}
+}
+
+#closeViewer{
+position:absolute;
+top:30px;
+right:40px;
+
+font-size:28px;
+color:white;
+cursor:pointer;
+
+font-family:sans-serif;
+}

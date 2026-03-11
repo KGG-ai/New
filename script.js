@@ -431,3 +431,43 @@ requestAnimationFrame(animate);
 
 init();
 animate();
+/* ===============================
+MEMORY IMAGE VIEWER
+================================*/
+
+const viewer = document.getElementById("imageViewer");
+const viewerImg = document.getElementById("viewerImg");
+const closeViewer = document.getElementById("closeViewer");
+
+/* open image */
+
+document.querySelectorAll(".carousel img").forEach(img => {
+
+    img.addEventListener("click", () => {
+
+        viewerImg.src = img.src;
+        viewer.classList.add("show");
+
+    });
+
+});
+
+/* close viewer */
+
+if(closeViewer){
+closeViewer.addEventListener("click", () => {
+
+    viewer.classList.remove("show");
+
+});
+}
+
+/* also close if background clicked */
+
+viewer.addEventListener("click", (e) => {
+
+    if(e.target === viewer){
+        viewer.classList.remove("show");
+    }
+
+});
