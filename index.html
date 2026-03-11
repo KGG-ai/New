@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For My Grizzly ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="flash"></div>
+<div id="slash"></div>
+<canvas id="particles"></canvas>
+<div class="stars"></div>
+
+<div class="fireflies">
+<span style="left:10%"></span>
+<span style="left:25%"></span>
+<span style="left:40%"></span>
+<span style="left:55%"></span>
+<span style="left:70%"></span>
+<span style="left:85%"></span>
+</div>
+<div id="systemScan">
+
+<p id="scanText"></p>
+
+</div>
+<div id="ayanokojiIntro">
+
+<p class="systemText">SYSTEM INITIALIZING...</p>
+
+<p class="ayanokojiQuote">
+"Some moments change everything.
+
+Some people become your entire world.
+
+And today...
+
+is the day one of those people was born."
+</p>
+
+<p class="systemText2">ACCESSING MEMORY FILE...</p>
+
+</div>
+<!-- PAGE 1 -->
+<section id="page1" class="page">
+
+<h1>Happy Birthday My Grizzly ❤️</h1>
+
+<p>I made something special for you and only youu my babyyyyyy.</p>
+
+<button onclick="nextPage(3)">See Our Memories</button>
+
+</section>
+
+
+
+<!-- PAGE 3 MEMORIES -->
+<section id="page3" class="page hidden">
+
+<h1>Our Memories</h1>
+
+<div class="carousel">
+
+<img src="WIN_20260302_13_09_35_Pro.jpg">
+<img src="WIN_20260302_13_09_48_Pro.jpg">
+
+</div>
+
+<button onclick="nextPage(4)">Something for you</button>
+
+</section>
+
+
+<!-- PAGE 4 ENVELOPES -->
+<section id="page4" class="page hidden">
+
+<h1>Open When...</h1>
+
+<div class="emotions">
+<button onclick="playVoice('fortodayyyy')">For Todayyyyy</button>
+<button onclick="playVoice('angry')">When you are feeling Angry</button>
+
+<button onclick="playVoice('sad')">When you are feeling Sad</button>
+
+<button onclick="playVoice('lonely')">When you are feeling Lonely</button>
+
+<button onclick="playVoice('empty')">When you are feeling Empty</button>
+
+
+</div>
+<audio id="fortodayyyy" src="for todayyyy.mp3"></audio>
+<audio id="angryVoice" src="angry.mp3"></audio>
+<audio id="sadVoice" src="sad.mp3"></audio>
+<audio id="lonelyVoice" src="lonely.mp3"></audio>
+<audio id="emptyVoice" src="empty.mp3"></audio>
+
+<p id="message"></p>
+
+<button onclick="nextPage(5)">Final Surprise</button>
+
+</section>
+
+
+<!-- PAGE 5 FINAL -->
+<section id="page5" class="page hidden final">
+
+<p id="loveMessage" class="finalText">
+Abhi bhale hi main aapke pass nahi hu ahoooo lekin mera dil, mera mnn, mera pyaar sb kuch aapke pass hai.
+Kuki main puri ki puri sirf aapki ho. I know ki bohot problems ho rhi hai lekin just always remember my love,
+ki chae kuch bhi ku na ho jaye kitni bhi badi mushkil , situation, problem kuch bhi ku na ho, I will chose only and only one person 
+and that is YOU MERA BACCHA.
+I am always and always with you thikee kabhi khud ko akela mt smjhna aapke saath aapki panda humesha khadi hai aapka saath dene aapka support bnne ke liye.
+I love youu meri nanii si jaann.
+— Your Komu
+
+</p>
+<div id="finalWish" class="finalWish">
+Once again Happyyyyyy Birthday To My One and Only Men
+</div>
+</section>
+<div id="ghoulAwakening">
+  <div class="ghoulEye"></div>
+  <div class="kaguneRing"></div>
+</div>
+
+<audio id="bgMusic" loop>
+<source src="ishqhai.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="slashSound" src="slash.mp3" preload="auto"></audio>
+<audio id="heartbeatSound" src="heartbeat.mp3" preload="auto"></audio>
+
+<script src="script.js"></script>
+
+</body>
+</html>
