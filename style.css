@@ -401,12 +401,6 @@ MEMORY CAROUSEL
 MEMORY REVEAL ANIMATION
 ================================*/
 
-/* HEART MEMORY LAYOUT */
-
-/* ===============================
-MEMORY REVEAL ANIMATION
-================================*/
-
 .carousel{
 display:flex;
 flex-wrap:wrap;
