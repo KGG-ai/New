@@ -407,13 +407,16 @@ animation:slide 60s linear infinite;
 .carousel img{
 
 width:250px;
-height: 250px;
+height:250px;
 
-border-radius:12px;
+object-fit:cover;
+
+border-radius:18px;
 
 box-shadow:0 10px 25px rgba(0,0,0,0.6);
 
 transition:transform .3s ease;
+
 }
 
 .carousel img:hover{
