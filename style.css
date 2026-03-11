@@ -738,3 +738,52 @@ z-index:998;
 100%{opacity:0;}
 
 }
+/* ===============================
+MOBILE FIX
+================================*/
+
+@media (max-width:768px){
+
+.page{
+height:auto;
+min-height:100vh;
+padding:40px 15px;
+}
+
+/* center memories section */
+
+.carousel{
+
+justify-content:center;
+align-items:center;
+
+gap:14px;
+
+margin-top:20px;
+
+}
+
+/* resize images */
+
+.carousel img{
+
+width:160px;
+height:160px;
+
+}
+
+/* fix heading position */
+
+.page h1{
+font-size:26px;
+margin-bottom:10px;
+}
+
+/* remove large empty space */
+
+.page p{
+font-size:18px;
+max-width:90%;
+}
+
+}
