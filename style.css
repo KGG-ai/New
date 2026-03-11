@@ -401,85 +401,85 @@ MEMORY CAROUSEL
 MEMORY REVEAL ANIMATION
 ================================*/
 
+/* HEART MEMORY LAYOUT */
+
 .carousel{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:18px;
-margin-top:30px;
-max-width:900px;
+position:relative;
+width:360px;
+height:320px;
+margin-top:40px;
 }
 
-/* image style */
+/* photo style */
 
 .carousel img{
-width:150px;
-height:150px;
+position:absolute;
+width:70px;
+height:70px;
 object-fit:cover;
 
-border-radius:16px;
+border-radius:12px;
 
-box-shadow:0 10px 25px rgba(0,0,0,0.6);
+box-shadow:0 8px 20px rgba(0,0,0,0.6);
 
 opacity:0;
-transform:translateY(40px) scale(.9);
+transform:scale(0.6);
 
-animation:memoryReveal 1.2s ease forwards;
+animation:memoryPop 0.8s ease forwards;
 }
 
-/* reveal sequence for 25 photos */
+/* HEART POSITIONS */
 
-.carousel img:nth-child(1){animation-delay:0.3s;}
-.carousel img:nth-child(2){animation-delay:0.6s;}
-.carousel img:nth-child(3){animation-delay:0.9s;}
-.carousel img:nth-child(4){animation-delay:1.2s;}
-.carousel img:nth-child(5){animation-delay:1.5s;}
-.carousel img:nth-child(6){animation-delay:1.8s;}
-.carousel img:nth-child(7){animation-delay:2.1s;}
-.carousel img:nth-child(8){animation-delay:2.4s;}
-.carousel img:nth-child(9){animation-delay:2.7s;}
-.carousel img:nth-child(10){animation-delay:3s;}
-.carousel img:nth-child(11){animation-delay:3.3s;}
-.carousel img:nth-child(12){animation-delay:3.6s;}
-.carousel img:nth-child(13){animation-delay:3.9s;}
-.carousel img:nth-child(14){animation-delay:4.2s;}
-.carousel img:nth-child(15){animation-delay:4.5s;}
-.carousel img:nth-child(16){animation-delay:4.8s;}
-.carousel img:nth-child(17){animation-delay:5.1s;}
-.carousel img:nth-child(18){animation-delay:5.4s;}
-.carousel img:nth-child(19){animation-delay:5.7s;}
-.carousel img:nth-child(20){animation-delay:6s;}
-.carousel img:nth-child(21){animation-delay:6.3s;}
-.carousel img:nth-child(22){animation-delay:6.6s;}
-.carousel img:nth-child(23){animation-delay:6.9s;}
-.carousel img:nth-child(24){animation-delay:7.2s;}
+/* top */
+.carousel img:nth-child(1){top:0;left:120px;animation-delay:0.2s;}
+.carousel img:nth-child(2){top:0;left:170px;animation-delay:0.4s;}
+
+/* row 2 */
+.carousel img:nth-child(3){top:40px;left:80px;animation-delay:0.6s;}
+.carousel img:nth-child(4){top:40px;left:130px;animation-delay:0.8s;}
+.carousel img:nth-child(5){top:40px;left:180px;animation-delay:1s;}
+.carousel img:nth-child(6){top:40px;left:230px;animation-delay:1.2s;}
+
+/* row 3 */
+.carousel img:nth-child(7){top:80px;left:60px;animation-delay:1.4s;}
+.carousel img:nth-child(8){top:80px;left:110px;animation-delay:1.6s;}
+.carousel img:nth-child(9){top:80px;left:160px;animation-delay:1.8s;}
+.carousel img:nth-child(10){top:80px;left:210px;animation-delay:2s;}
+.carousel img:nth-child(11){top:80px;left:260px;animation-delay:2.2s;}
+
+/* row 4 */
+.carousel img:nth-child(12){top:120px;left:90px;animation-delay:2.4s;}
+.carousel img:nth-child(13){top:120px;left:140px;animation-delay:2.6s;}
+.carousel img:nth-child(14){top:120px;left:190px;animation-delay:2.8s;}
+.carousel img:nth-child(15){top:120px;left:240px;animation-delay:3s;}
+
+/* row 5 */
+.carousel img:nth-child(16){top:160px;left:120px;animation-delay:3.2s;}
+.carousel img:nth-child(17){top:160px;left:170px;animation-delay:3.4s;}
+.carousel img:nth-child(18){top:160px;left:220px;animation-delay:3.6s;}
+
+/* row 6 */
+.carousel img:nth-child(19){top:200px;left:140px;animation-delay:3.8s;}
+.carousel img:nth-child(20){top:200px;left:190px;animation-delay:4s;}
+
+/* bottom */
+.carousel img:nth-child(21){top:240px;left:160px;animation-delay:4.2s;}
+.carousel img:nth-child(22){top:280px;left:150px;animation-delay:4.4s;}
+.carousel img:nth-child(23){top:280px;left:180px;animation-delay:4.6s;}
+.carousel img:nth-child(24){top:240px;left:200px;animation-delay:4.8s;}
 
 /* animation */
 
-@keyframes memoryReveal{
-
+@keyframes memoryPop{
 0%{
 opacity:0;
-transform:translateY(40px) scale(.9);
+transform:scale(0.4);
 }
 
 100%{
 opacity:1;
-transform:translateY(0) scale(1);
+transform:scale(1);
 }
-
-}
-
-/* hover effect */
-
-.carousel img:hover{
-
-transform:scale(1.06);
-
-box-shadow:
-0 15px 40px rgba(0,0,0,0.7),
-0 0 20px rgba(255,100,200,0.4);
-
 }
 /* ===============================
 FINAL MESSAGE
