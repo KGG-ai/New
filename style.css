@@ -116,7 +116,9 @@ PAGE LAYOUT
 ================================*/
 
 .page{
-height:100vh;
+min-height:100dvh;
+padding:40px 15px;
+
 width:100%;
 
 display:flex;
@@ -732,59 +734,5 @@ z-index:998;
 50%{opacity:.9;}
 
 100%{opacity:0;}
-
-}
-/* ===============================
-MOBILE VIEW FIX
-================================*/
-
-@media (max-width:768px){
-
-/* center heading properly */
-
-.page h1{
-width:100%;
-text-align:center;
-margin-bottom:15px;
-}
-
-/* fix carousel alignment */
-
-.carousel{
-justify-content:center;
-align-items:center;
-gap:12px;
-animation:slideMobile 25s linear infinite;
-}
-
-/* make images square for phone */
-
-.carousel img{
-width:150px;
-height:150px;
-object-fit:cover;
-border-radius:14px;
-}
-
-/* reduce empty vertical space */
-
-.page{
-padding-top:40px;
-padding-bottom:40px;
-}
-
-/* smoother animation for mobile */
-
-@keyframes slideMobile{
-
-0%{
-transform:translateX(60%);
-}
-
-100%{
-transform:translateX(-60%);
-}
-
-}
 
 }
