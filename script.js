@@ -70,29 +70,34 @@ PAGE CHANGE WITH GLASS EFFECT
 
 function nextPage(num){
 
-let flash=document.getElementById("flashReveal")
+let flash = document.getElementById("flashReveal");
 
-flash.style.animation="flashReveal 0.4s ease"
-
-setTimeout(()=>{
-flash.style.animation=""
-},400)
+flash.style.animation = "flashReveal 0.4s ease";
 
 setTimeout(()=>{
+flash.style.animation = "";
+},400);
 
-let pages=document.querySelectorAll(".page");
+setTimeout(()=>{
+
+/* hide all pages */
+
+let pages = document.querySelectorAll(".page");
 
 pages.forEach(page=>{
 page.classList.add("hidden");
 });
 
-let target=document.getElementById("page"+num);
+/* show selected page */
+
+let target = document.getElementById("page"+num);
 
 if(target){
 target.classList.remove("hidden");
 }
 
-slash.style.animation="";
+/* stop voice notes */
+
 let voices = [
 document.getElementById("fortodayyyy"),
 document.getElementById("angryVoice"),
@@ -107,66 +112,68 @@ v.pause();
 v.currentTime = 0;
 }
 });
+
+/* FINAL PAGE EFFECT */
+
 if(num === 5){
 
 heartMode = true;
+
+let ghoul = document.getElementById("ghoulAwakening");
+let eye = document.querySelector(".ghoulEye");
+let ring = document.querySelector(".kaguneRing");
+let para = document.getElementById("loveMessage");
 let heart = document.getElementById("heartbeatSound");
 
-heart.volume = 0.4;
-
-heart.currentTime = 0;
-
-heart.play().catch(()=>{});
-
-let ghoul = document.getElementById("ghoulAwakening")
-let eye = document.querySelector(".ghoulEye")
-let ring = document.querySelector(".kaguneRing")
-let para = document.getElementById("loveMessage")
-
 /* show black screen */
-heart.pause();
+
+ghoul.style.opacity = 1;
+
+/* play heartbeat */
+
+heart.volume = 0.7;
 heart.currentTime = 0;
-ghoul.style.opacity = 1
+heart.play().catch(()=>{});
 
 /* restart animations */
 
-eye.style.animation = "none"
-ring.style.animation = "none"
+eye.style.animation = "none";
+ring.style.animation = "none";
+
+void eye.offsetWidth;   // force animation restart
+void ring.offsetWidth;
+
+eye.style.animation = "eyeGlow 1.4s ease forwards";
+ring.style.animation = "kaguneExpand 1.6s ease forwards";
+
+/* hide ghoul screen */
 
 setTimeout(()=>{
 
-eye.style.animation = "eyeGlow 1.4s ease forwards"
-ring.style.animation = "kaguneExpand 1.6s ease forwards"
+ghoul.style.opacity = 0;
 
-},50)
+para.style.opacity = 1;
 
-/* hide ghoul after animation */
-
-setTimeout(()=>{
-
-ghoul.style.opacity = 0
-
-para.style.opacity = 1
-
-},1700)
+},1700);
 
 /* paragraph fade */
 
 setTimeout(()=>{
 
-para.classList.add("fadeOut")
+para.classList.add("fadeOut");
 
-},6500)
+},6500);
 
 /* final message */
 
 setTimeout(()=>{
 
-document.getElementById("finalWish").classList.add("show")
+document.getElementById("finalWish").classList.add("show");
 
-},8500)
+},8500);
 
 }
+
 },300);
 
 }
