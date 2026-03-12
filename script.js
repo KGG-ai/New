@@ -162,7 +162,7 @@ setTimeout(()=>{
 
 para.classList.add("fadeOut");
 
-},6500);
+},60000);
 
 /* final message */
 
@@ -170,7 +170,7 @@ setTimeout(()=>{
 
 document.getElementById("finalWish").classList.add("show");
 
-},8500);
+},65000);
 
 }
 
@@ -469,5 +469,6 @@ viewer.addEventListener("click", (e) => {
     if(e.target === viewer){
         viewer.classList.remove("show");
     }
+
 
 });
