@@ -248,7 +248,7 @@ setTimeout(()=>{
 
 text.classList.add("fadeOut")
 
-},5000)
+},60000)
 
 /* show final message after fade */
 
@@ -256,7 +256,7 @@ setTimeout(()=>{
 
 document.getElementById("finalWish").classList.add("show")
 
-},7000)
+},65000)
 
 }
 /* ===============================
