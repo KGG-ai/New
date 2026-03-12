@@ -3,7 +3,7 @@ const scanMessage =
 
 Identity confirmed.
 
-Name: Grizzly
+Name: Grizzly.
 
 Status: Komu's most important person ❤️`;
 
@@ -162,7 +162,7 @@ setTimeout(()=>{
 
 para.classList.add("fadeOut");
 
-},6500);
+},60000);
 
 /* final message */
 
@@ -170,7 +170,7 @@ setTimeout(()=>{
 
 document.getElementById("finalWish").classList.add("show");
 
-},8500);
+},65000);
 
 }
 
@@ -236,27 +236,6 @@ clearInterval(fade);
 };
 
 }
-
-}
-function showFinalWish(){
-
-let text=document.getElementById("loveMessage")
-
-/* paragraph visible for few seconds */
-
-setTimeout(()=>{
-
-text.classList.add("fadeOut")
-
-},60000)
-
-/* show final message after fade */
-
-setTimeout(()=>{
-
-document.getElementById("finalWish").classList.add("show")
-
-},65000)
 
 }
 /* ===============================
