@@ -103,7 +103,10 @@ document.getElementById("fortodayyyy"),
 document.getElementById("angryVoice"),
 document.getElementById("sadVoice"),
 document.getElementById("lonelyVoice"),
-document.getElementById("emptyVoice")
+document.getElementById("emptyVoice"),
+document.getElementById("depressedVoice"),
+document.getElementById("missmeVoice"),
+document.getElementById("motivationVoice")
 ];
 
 voices.forEach(v=>{
@@ -188,7 +191,10 @@ fortodayyyy: document.getElementById("fortodayyyy"),
 angry: document.getElementById("angryVoice"),
 sad: document.getElementById("sadVoice"),
 lonely: document.getElementById("lonelyVoice"),
-empty: document.getElementById("emptyVoice")
+empty: document.getElementById("emptyVoice"),
+depressed: document.getElementById("depressedVoice"),
+missme: document.getElementById("missmeVoice"),
+motivation: document.getElementById("motivationVoice")
 };
 
 let bgMusic = document.getElementById("bgMusic");
